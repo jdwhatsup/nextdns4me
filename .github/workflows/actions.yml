@@ -28,6 +28,5 @@ jobs:
           NEXTDNS_CONFIG: ${{ secrets.NEXTDNS_CONFIG }}
           NEXTDNS_APIKEY: ${{ secrets.NEXTDNS_APIKEY }}
           DNS4ME_APIKEY: ${{ secrets.DNS4ME_APIKEY }}
-          CUSTOM_RECORDS: |
-            ${{ vars.CUSTOM_RECORDS }}
+          CUSTOM_RECORDS: ${{ vars.CUSTOM_RECORDS }}
         run: python main.py

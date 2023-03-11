@@ -47,6 +47,7 @@ hosts_content = session.get(hosts_url).text
 # append custom DNS records, if set
 if len(CUSTOM_RECORDS) != 0:
     hosts_content = f"{hosts_content}\n{CUSTOM_RECORDS}"
+    print(hosts_content)
 hosts_lines = hosts_content.strip().split("\n")
 dns4me_records = {"data":[{"name": domain_name, "content": ip_address} for ip_address, domain_name in [line.strip().split() for line in hosts_lines]]}
 dns4me_df = pd.DataFrame.from_dict(dns4me_records["data"])
