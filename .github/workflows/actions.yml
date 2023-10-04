@@ -1,8 +1,8 @@
 name: Run main.py
 
 on:
-  # schedule:
-  #   - cron: '* * * * *' # Every minute
+  schedule:
+    - cron: '* * * * *' # Every minute
   workflow_dispatch:
 
 jobs:
