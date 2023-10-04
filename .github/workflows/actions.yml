@@ -2,7 +2,7 @@ name: Run main.py
 
 on:
   schedule:
-    - cron: '* * * * *' # Every minute
+    - cron: '*/15 * * * *' # Every minute
   workflow_dispatch:
 
 jobs:
